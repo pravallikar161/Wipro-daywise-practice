@@ -1,0 +1,43 @@
+/* Universal selector */
+* {
+    font-family: Arial, sans-serif;
+    color: blue; /* Will be overridden by more specific selectors */
+}
+
+/* Group selector (applies to h1 and p) */
+h1, p {
+    background-color: lightgray;
+    padding: 10px;
+}
+
+/* Class selector */
+.highlight {
+    color: green; /* Overrides universal selector's blue */
+    font-weight: bold;
+}
+
+/* ID selector */
+#main-title {
+    color: red; /* Overrides class selector's green for the h1 */
+    text-transform: uppercase;
+}
+
+/* ID selector for a div */
+#content-box {
+    border: 2px solid black;
+    padding: 15px;
+}
+
+/* Button class selector */
+.btn {
+    background-color: orange;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+/* Adding another style for same element to show overriding by order */
+.highlight {
+    background-color: yellow; /* This overrides background-color in group selector for elements with 'highlight' */
+}

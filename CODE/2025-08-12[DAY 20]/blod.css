@@ -1,0 +1,154 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    line-height: 1.6;
+    color: #333;
+    background-color: #fafafa;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Header */
+.header {
+    background-color: #222;
+    color: white;
+    padding: 15px 0;
+}
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+.nav-links a {
+    color: white;
+    text-decoration: none;
+}
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
+/* Hero Section */
+.hero {
+    background: url('https://via.placeholder.com/1200x400') center/cover no-repeat;
+    color: white;
+    text-align: center;
+    padding: 80px 20px;
+}
+.hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+.meta {
+    font-size: 0.9rem;
+}
+
+/* Main Content Grid */
+.content-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+/* Main Content */
+.intro {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+main img {
+    max-width: 100%;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+/* CTA Button */
+.cta-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 20px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+.cta-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Sidebar */
+.sidebar {
+    background: #fff;
+    padding: 20px;
+    border-radius: 5px;
+}
+.about-author {
+    text-align: center;
+}
+.about-author img {
+    border-radius: 50%;
+}
+.about-author h4 {
+    margin-top: 10px;
+}
+.social-links a {
+    text-decoration: none;
+    color: #007bff;
+}
+.social-links a:hover {
+    text-decoration: underline;
+}
+.recent-posts ul {
+    list-style: none;
+    padding: 0;
+}
+.recent-posts li {
+    margin-bottom: 8px;
+}
+.recent-posts a {
+    text-decoration: none;
+    color: #333;
+}
+.recent-posts a:hover {
+    color: #007bff;
+}
+
+/* Footer */
+.footer {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+}
+.footer a {
+    color: #007bff;
+    text-decoration: none;
+}
+.footer a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .content-grid {
+        grid-template-columns: 1fr;
+    }
+}
+@media (max-width: 600px) {
+    .hero h2 {
+        font-size: 1.8rem;
+    }
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
