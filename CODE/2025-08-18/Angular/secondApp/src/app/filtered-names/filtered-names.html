@@ -1,0 +1,14 @@
+<!-- Exercise-14  -->
+<input
+  type="text"
+  name="name"
+  [(ngModel)]="searchText"
+  (input)="onTextChange()"
+  placeholder="Enter a name"
+/>
+
+<ul>
+  @for(name of filteredNames; track $index){
+  <li>{{ name }}</li>
+  }
+</ul>

@@ -1,0 +1,17 @@
+.book-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 16px;
+  padding: 16px;
+}
+
+.book {
+  text-align: center;
+  padding: 20px;
+  background-color: aliceblue;
+  border-radius: 10px;
+}
+
+.book > img {
+  border-radius: 10px;
+}

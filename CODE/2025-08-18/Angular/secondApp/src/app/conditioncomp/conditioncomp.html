@@ -1,0 +1,20 @@
+<!-- Exercise-11  -->
+<!-- @if(falg) {
+<p>Checkbox is Clicked</p>
+} @else {
+<p>Checkbox is Unclicked</p>
+}
+
+<input type="checkbox" (click)="toggle()" />Click -->
+
+<!-- Exercise-12  -->
+<button (click)="load()">Load</button>
+<br />
+<br />
+<select name="country">
+  @if(flag) { @for(country of countryNames; track $index) {
+  <option value="country">{{ country }}</option>
+  } } @else {
+  <option value="country">---Select country---</option>
+  }
+</select>

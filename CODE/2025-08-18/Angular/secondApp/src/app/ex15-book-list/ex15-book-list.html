@@ -1,0 +1,13 @@
+<div class="book-grid">
+  <!-- @for(book of books; track $index){ -->
+  <div *ngFor="let book of books; let i = index">
+    <div class="book">
+      <img [src]="book.img" width="200px" height="250px" alt="img" />
+      <h5>{{ book.title }}</h5>
+      <p>
+        {{ book.description }}
+      </p>
+    </div>
+  </div>
+  <!-- } -->
+</div>

@@ -1,0 +1,9 @@
+.heading {
+  color: blueviolet;
+  text-align: center;
+  text-decoration: underline;
+  font-size: 40px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: bold;
+}
