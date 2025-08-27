@@ -1,0 +1,30 @@
+.food-card {
+  transition: transform 0.3s, box-shadow 0.3s;
+  border-radius: 12px;
+}
+
+.food-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.btn-hover {
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.btn-hover:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+.badge {
+  font-size: 0.85rem;
+}
+
+.category-badge {
+  font-size: 0.85rem;
+  font-weight: 500;
+  padding: 0.5em 0.75em;
+  border-radius: 12px;
+  color: black;
+}

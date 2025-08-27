@@ -1,0 +1,20 @@
+<div class="container my-5">
+  <h2 class="text-center mb-5 text-primary fw-bold" style="font-family: 'Poppins', sans-serif">
+    🍽️ Food Menu
+  </h2>
+  <div class="row g-4">
+    <div class="col-12 col-sm-6 col-md-4" *ngFor="let food of foods">
+      <div class="card h-100 shadow-sm border-0 food-card">
+        <div class="card-body d-flex flex-column">
+          <img [src]="food.img" alt="image" height="300px" />
+          <h5 class="card-title fw-bold">{{ food.name }}</h5>
+          <span class="category-badge mb-3">{{ food.category }}</span>
+          <p class="card-text mt-auto fw-semibold">Price: ${{ food.price.toFixed(2) }}</p>
+        </div>
+        <div class="card-footer bg-transparent border-0 text-center">
+          <button class="btn btn-primary btn-sm w-100 btn-hover">Order Now</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

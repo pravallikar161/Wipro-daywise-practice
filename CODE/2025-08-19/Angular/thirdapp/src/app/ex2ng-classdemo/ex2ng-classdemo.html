@@ -1,0 +1,21 @@
+<!-- Exercise-2  -->
+<!-- <div [ngClass]="'app1'"> -->
+<!-- <div [ngClass]="['app1', 'app2']"> -->
+<!-- <div [ngClass]="{ app1: false, app2: true }"> -->
+<!-- <div [ngClass]="{ app1: flag1, app2: flag2 }"> -->
+
+<!-- Exercise-3  -->
+<div [ngClass]="getNgClass()">
+  <h1>ngClass demo</h1>
+  Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos repellendus reprehenderit, placeat
+  dolor dolorum magnam repellat. Expedita esse quo quasi quas optio iste, quis, ut consequatur quos
+  deserunt provident id!
+</div>
+
+<!-- Exercise-4  -->
+<!-- <div [ngStyle]="{ color: 'brown' }"><h1>This is ngStyle</h1></div> -->
+<!-- <div [ngStyle]="{ color: 'brown', fontSize: '20px' }"><p>This is ngStyle</p></div> -->
+<!-- <div [ngStyle]="{ color: color1, fontSize: fontSize1 }"><p>This is ngStyle</p></div> -->
+<div [ngStyle]="{ color: flag1 ? 'purple' : 'green', fontSize: flag2 ? '20px' : '30px' }">
+  <p>This is ngStyle</p>
+</div>

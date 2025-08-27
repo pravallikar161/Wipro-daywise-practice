@@ -1,0 +1,13 @@
+.app1 {
+  border: 1px solid black;
+  font-weight: bold;
+  background-color: aliceblue;
+  margin: 50px 30px;
+}
+
+.app2 {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva,
+    Verdana, sans-serif;
+  color: purple;
+  padding: 30px;
+}

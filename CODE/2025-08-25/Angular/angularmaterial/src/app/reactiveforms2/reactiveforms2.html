@@ -1,0 +1,64 @@
+<h2>Registration Form</h2>
+
+<form [formGroup]="regForm" (ngSubmit)="onSubmit()" class="reg-form">
+  <div>
+    <mat-form-field appearance="outline" class="w-100">
+      <mat-label>Name</mat-label>
+      <input matInput formControlName="name" placeholder="Enter your name" />
+      <!-- <mat-error *ngIf="regForm.get('name')?.hasError('required')"> Name is required </mat-error> -->
+    </mat-form-field>
+    @if(regForm.controls['name'].invalid && regForm.controls['name'].touched ||
+    regForm.controls['name'].dirty){ @if(regForm.controls['name'].errors?.['required']){
+    <!-- <span>Name is required</span> -->
+    <mat-error> Name is required </mat-error>
+    } }
+  </div>
+
+  <div>
+    <mat-form-field appearance="outline" class="w-100">
+      <mat-label>Email</mat-label>
+      <input matInput formControlName="email" placeholder="Enter your email" />
+      <!-- @if(regForm.controls['email'].invalid && regForm.controls['email'].touched ||
+      regForm.controls['eamil'].dirty){ @if(regForm.controls['eamil'].errors?.['required']){
+      <span>Email is required</span>
+      } @if(regForm.controls['eamil'].errors?.['email']){
+      <span>Email is not in correct format</span>
+      } } -->
+
+      <mat-error *ngIf="regForm.get('email')?.hasError('required')"> Email is required </mat-error>
+      <mat-error *ngIf="regForm.get('email')?.hasError('email')"> Enter a valid email </mat-error>
+    </mat-form-field>
+  </div>
+
+  <div>
+    <mat-form-field appearance="outline" class="w-100">
+      <mat-label>Date of Birth</mat-label>
+      <input matInput [matDatepicker]="picker" formControlName="dob" placeholder="Choose date" />
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+      <mat-error *ngIf="regForm.get('dob')?.hasError('required')">
+        Date of Birth is required
+      </mat-error>
+    </mat-form-field>
+  </div>
+
+  <div>
+    <mat-form-field appearance="outline" class="w-100">
+      <mat-label>Subject of Study</mat-label>
+      <mat-select formControlName="subject">
+        @for(sub of subjects; track $index){
+        <mat-option [value]="sub">{{ sub }}</mat-option>
+        }
+      </mat-select>
+      <mat-error *ngIf="regForm.get('subject')?.hasError('required')">
+        Subject is required
+      </mat-error>
+    </mat-form-field>
+  </div>
+
+  <div class="button-container">
+    <button mat-raised-button color="primary" type="submit" [disabled]="regForm.invalid">
+      Submit
+    </button>
+  </div>
+</form>

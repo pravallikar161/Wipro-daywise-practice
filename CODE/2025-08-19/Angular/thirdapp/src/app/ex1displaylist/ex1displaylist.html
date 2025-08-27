@@ -1,0 +1,15 @@
+<h1>Fruits</h1>
+<div class="fruit-flex">
+  @for(fruit of fruitsList; track $index){
+  <div class="card fruit-card" style="width: 18rem">
+    <img [src]="fruit.img" class="card-img-top" [alt]="fruit.name" width="250px" height="250px" />
+    <div class="card-body">
+      <h5 class="card-title">{{ fruit.name }}</h5>
+      <p class="card-text">
+        {{ fruit.description }}
+      </p>
+      <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+    </div>
+  </div>
+  }
+</div>

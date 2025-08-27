@@ -1,0 +1,45 @@
+<!-- Exercise-2 -->
+<div style="margin: 20px">
+  <mat-vertical-stepper [linear]="true" #stepper>
+    <mat-step [stepControl]="nameForm">
+      <form [formGroup]="nameForm">
+        <ng-template matStepLabel>Enter Name</ng-template>
+        <mat-form-field appearance="fill">
+          <mat-label>Name</mat-label>
+          <input matInput placeholder="Your name" formControlName="name" required />
+        </mat-form-field>
+        <div>
+          <button mat-button matStepperNext [disabled]="!nameForm.valid">Next</button>
+        </div>
+      </form>
+    </mat-step>
+
+    <mat-step [stepControl]="ageForm">
+      <form [formGroup]="ageForm">
+        <ng-template matStepLabel>Enter Age</ng-template>
+        <mat-form-field appearance="fill">
+          <mat-label>Age</mat-label>
+          <input matInput type="number" placeholder="Your age" formControlName="age" required />
+        </mat-form-field>
+        <div>
+          <button mat-button matStepperPrevious>Back</button>
+          <button mat-button matStepperNext [disabled]="!ageForm.valid">Next</button>
+        </div>
+      </form>
+    </mat-step>
+
+    <mat-step [stepControl]="emailForm">
+      <form [formGroup]="emailForm">
+        <ng-template matStepLabel>Enter Email</ng-template>
+        <mat-form-field appearance="fill">
+          <mat-label>Email</mat-label>
+          <input matInput type="email" placeholder="Your email" formControlName="email" required />
+        </mat-form-field>
+        <div>
+          <button mat-button matStepperPrevious>Back</button>
+          <button mat-button (click)="submit()" [disabled]="!emailForm.valid">Submit</button>
+        </div>
+      </form>
+    </mat-step>
+  </mat-vertical-stepper>
+</div>

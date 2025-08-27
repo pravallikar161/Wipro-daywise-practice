@@ -1,0 +1,25 @@
+h1 {
+  text-align: center;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-decoration: underline;
+  text-transform: uppercase;
+}
+
+.fruit-flex {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 16px;
+  margin: 20px 0;
+}
+
+.fruit-card {
+  text-align: center;
+  background-color: bisque;
+  padding: 16px 0;
+  border-radius: 8px;
+}
+
+.fruit-card > img {
+  border-radius: 8px;
+}

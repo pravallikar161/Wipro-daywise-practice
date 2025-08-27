@@ -1,0 +1,39 @@
+{
+  "vechile": [
+    {
+      "make": "Tesla",
+      "model": "Model 3",
+      "fuelType": "Diesel",
+      "price": 39990,
+      "id": "1213"
+    },
+    {
+      "make": "Ford",
+      "model": "F-150",
+      "fuelType": "Diesel",
+      "price": 31000,
+      "id": "3748"
+    },
+    {
+      "make": "Honda",
+      "model": "Civic",
+      "fuelType": "Petrol",
+      "price": 24000,
+      "id": "b1da"
+    },
+    {
+      "id": "8683",
+      "make": "Hyundai",
+      "model": "Ioniq 5",
+      "fuelType": "Electric",
+      "price": 50000
+    },
+    {
+      "id": "e4e0",
+      "make": "Tesla",
+      "model": "Model 3",
+      "fuelType": "Electric",
+      "price": 57999
+    }
+  ]
+}

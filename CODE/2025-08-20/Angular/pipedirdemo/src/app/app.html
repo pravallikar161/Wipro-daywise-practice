@@ -1,0 +1,26 @@
+<!-- Exercise-1 -->
+<div>
+  <label for="text">Enter something : </label>
+  <input type="text" [(ngModel)]="textEntered" />
+
+  <p>{{ textEntered | uppercase }}</p>
+</div>
+
+<!-- Exercise-2  -->
+<div class="p-4">
+  <label for="calendar">Select a date:</label>
+  <input id="calendar" type="date" [(ngModel)]="date" class="border p-2 rounded" />
+
+  <br /><br />
+
+  <div class="mt-4 text-lg">
+    Selected Date:
+    {{ date | date : 'shortDate' }}
+  </div>
+</div>
+
+<!-- Exercise-3 -->
+<p>Fahrenheit : {{ centigrade | centitofahren }}</p>
+
+<!-- Exercise-4 -->
+<p appHighlightandstrikedir>Highlighted and striked the text</p>
