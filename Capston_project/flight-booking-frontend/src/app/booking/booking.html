@@ -1,0 +1,18 @@
+<div class="container mt-4">
+  <h4>Booking</h4>
+  <div class="alert alert-info">Flight ID: {{ flightId }}</div>
+
+  <form #f="ngForm" (ngSubmit)="proceed()" class="row g-2">
+    <div class="col-md-5">
+      <label class="form-label">Name</label>
+      <input class="form-control" name="name" [(ngModel)]="name" required>
+    </div>
+    <div class="col-md-5">
+      <label class="form-label">Email</label>
+      <input class="form-control" type="email" name="email" [(ngModel)]="email" required>
+    </div>
+    <div class="col-md-2 d-grid">
+      <button class="btn btn-primary mt-4" [disabled]="f.invalid">Proceed to Payment</button>
+    </div>
+  </form>
+</div>
