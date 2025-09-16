@@ -1,0 +1,39 @@
+
+
+<h2 class="text-center pt-4">Flight Booking App</h2>
+
+<div class="container centerarea"> 
+  <div class="card bg-color border-0 shadow-lg rounded-4 mx-auto text-dark" style="max-width: 900px; background: linear-gradient(135deg, #f8f9fa, #e3f2fd);">
+    <div class="card-body p-2">
+      <h2 class="text-center mb-4 fw-bold text-primary"> Search Flights</h2>
+      <form (ngSubmit)="submitSearch()" class="row g-4">
+        <div class="col-md-5">
+          <div class="form-floating">
+            <input type="text" class="form-control" id="fromInput" placeholder="From" [(ngModel)]="search.source" name="source" required minlength="3">
+            <label for="fromInput">From</label>
+          </div>
+        </div>
+        <div class="col-md-2 d-flex justify-content-center align-items-center">
+          <button type="button" class="btn btn-light border rounded-circle shadow-sm" (click)="swap()">⇆</button>
+        </div>
+        <div class="col-md-5">
+          <div class="form-floating">
+            <input type="text" class="form-control" id="toInput" placeholder="To" [(ngModel)]="search.destination" name="destination" required minlength="3">
+            <label for="toInput">To</label>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="form-floating">
+            <input type="date" class="form-control" id="dateInput" [(ngModel)]="search.date" name="date" required>
+            <label for="dateInput">Departure</label>
+          </div>
+        </div>
+        <div class="col-12 text-center mt-3">
+          <button type="submit" class="btn btn-primary btn-lg px-5 shadow">Search</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+

@@ -1,0 +1,32 @@
+.container {
+  max-width: 700px;
+  
+}
+
+h2 {
+  font-weight: bold;
+  color: #333;
+}
+
+.swap-btn {
+  margin-top: 25px;
+  font-size: 20px;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+}
+
+.bg-color{
+
+  background-image: linear-gradient(to top, #a8edea 0%, #fed6e3 100%);
+
+
+}
+.centerarea{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+  
+

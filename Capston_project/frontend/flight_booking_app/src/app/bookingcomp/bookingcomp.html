@@ -1,0 +1,42 @@
+<div class="container ">
+  <h2>Passenger & Booking Details</h2>
+  <form (ngSubmit)="submitBooking()">
+    <div class="form-group">
+      <label>Username</label>
+      <input type="text" [(ngModel)]="request.username" name="username" class="form-control" required />
+    </div>
+
+    <div class="form-group">
+      <label>Gender</label>
+      <select [(ngModel)]="request.gender" name="gender" class="form-control" required>
+        <option value="">-- Select Gender --</option>
+        <option value="Male">Male</option>
+        <option value="Female">Female</option>
+        <option value="Other">Other</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label>Age</label>
+      <input type="number" [(ngModel)]="request.age" name="age" class="form-control" required />
+    </div>
+
+    <div class="form-group">
+      <label>Email</label>
+      <input type="email" [(ngModel)]="request.userEmail" name="userEmail" class="form-control" required />
+    </div>
+
+    <div class="form-group">
+      <label>Travel Date</label>
+      <input type="date" [(ngModel)]="request.travelDate" name="travelDate" class="form-control" required />
+    </div>
+
+    <div class="form-group">
+     <label>Amount (₹)</label>
+     <input type="number" [(ngModel)]="request.amount" name="amount" class="form-control" readonly />
+   </div>
+
+    <button class="btn btn-primary">Proceed to Payment</button>
+  </form>
+</div>
+
